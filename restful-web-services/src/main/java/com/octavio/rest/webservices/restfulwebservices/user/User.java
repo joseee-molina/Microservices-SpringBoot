@@ -12,6 +12,9 @@ public class User {
 		return id;
 	}
 
+	//Default constructor not needed! Nice
+	
+	
 	public User(Integer id, String name, Date birthDate) {
 		super();
 		this.id = id;
