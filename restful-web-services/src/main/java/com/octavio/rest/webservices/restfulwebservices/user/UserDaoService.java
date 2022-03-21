@@ -39,6 +39,15 @@ public class UserDaoService {
 		return null;
 	}
 	
+	public User deleteById(int id) {
+		for(User u : users) {
+			if(u.getId()==id) {
+				users.remove(u);
+				return u;
+			}
+		}
+		return null;
+	}
 	
 
 }
