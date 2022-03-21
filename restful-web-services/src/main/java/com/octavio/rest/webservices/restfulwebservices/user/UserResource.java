@@ -3,6 +3,8 @@ package com.octavio.rest.webservices.restfulwebservices.user;
 import java.net.URI;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -34,7 +36,7 @@ public class UserResource {
 	}
 	
 	@PostMapping(path="/users")
-	public ResponseEntity createUser(@RequestBody User user) {
+	public ResponseEntity createUser(@Valid @RequestBody User user) {
 		User savedUser = service.save(user);
 		URI location = ServletUriComponentsBuilder
 		.fromCurrentRequest()
