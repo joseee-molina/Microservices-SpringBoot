@@ -1,9 +1,12 @@
 package com.octavio.rest.webservices.restfulwebservices.filtering;
 
+import com.fasterxml.jackson.annotation.JsonFilter;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-@JsonIgnoreProperties(value= {"field3"})
+//@JsonIgnoreProperties(value= {"field3"})
 //This is called static filtering, because we choose writing it hardcoded, it is not dynamic
+
+@JsonFilter("SomeBeanFilter")
 public class SomeBean {
 
 	private String field1;
